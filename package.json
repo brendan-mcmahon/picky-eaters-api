@@ -1,0 +1,23 @@
+{
+  "name": "picky-eater-api",
+  "version": "1.0.0",
+  "description": "API for the Picky Eaters app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendan-mcmahon/picky-eaters-api.git"
+  },
+  "author": "Brendan McMahon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brendan-mcmahon/picky-eaters-api/issues"
+  },
+  "homepage": "https://github.com/brendan-mcmahon/picky-eaters-api#readme",
+  "engines": {
+    "node": "12.x"
+  }
+}
