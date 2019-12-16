@@ -76,11 +76,28 @@ app.get('/opinionOptions', (req, res) => {
 })
 
 app.post('/addMenuItem', (req, res) => {
-    const body = req.body;
-    console.log(req.body);
-    console.log(req.body.test);
+
+    const restaurantId = req.body.restaurantId;
+    const personName = req.body.menuItem.person.name;
+    const opinionId = req.body.menuItem.opinion;
+    const itemName = req.body.menuItem.name;
+
+    let stringified = '';
+    switch(opinionId){
+        case "LikedIt":
+            stringified =  `${personName} likes the ${itemName}.`;
+            break;
+        case "MadeSick":
+            stringified =  `the ${itemName} made ${personName} sick!`;
+            break;
+        case "HatedIt":
+            stringified =  `${personName} did not care for the ${itemName}.`;
+            break;
+    }    
+
+    console.log(stringified);
     res.set('Content-Type', 'text/plain');
-    res.send(`You sent: ${JSON.stringify(body)}`);
+    res.send(stringified);
 })
 
 app.listen(process.env.PORT || 5000, err => {
