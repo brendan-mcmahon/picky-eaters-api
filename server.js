@@ -2,7 +2,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-// const pool = require('pg');
+// const { Pool } = require('pg');
 
 // const pool = new pool({
 //     connectionSTring: process.env.DATABASE_URL,
