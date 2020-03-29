@@ -1,15 +1,19 @@
 'use strict'
 
+const admin = require('firebase-admin');
+const models = require('./models/index');
 const express = require('express');
 const bodyParser = require('body-parser');
 // const { Pool } = require('pg');
 
 // const pool = new pool({
-//     connectionSTring: process.env.DATABASE_URL,
+//     connectionString: process.env.DATABASE_URL,
 //     ssl: true
 // });
 
 const app = express();
+
+let serviceAccount = require('./serviceAccountKey.json');
 
 const likedIt = { id: 1, name: "liked it" };
 const hatedIt = { id: 2, name: "hated it" };

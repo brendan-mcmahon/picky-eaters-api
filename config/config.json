@@ -1,0 +1,8 @@
+{
+  "development": {
+    "use_env_variable": "postgres://tylexjpldjtulm:f3544b9c1fd744c3df35cc83c55f406ee38971a59804d3fc6d5488788d5a9d14@ec2-174-129-255-4.compute-1.amazonaws.com:5432/ddm2pjaa3djh1d"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+}

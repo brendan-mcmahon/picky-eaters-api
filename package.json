@@ -8,6 +8,7 @@
     "start": "node server.js"
   },
   "repository": {
+    "build": "npx sequelize-cli db:migrate",
     "type": "git",
     "url": "git+https://github.com/brendan-mcmahon/picky-eaters-api.git"
   },
@@ -23,6 +24,13 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "pg": "^7.14.0"
+    "firebase-admin": "^8.10.0",
+    "lodash": "^4.17.15",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
   }
 }
