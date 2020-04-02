@@ -2,8 +2,10 @@
 
 const admin = require('firebase-admin');
 const express = require('express');
+var cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
+app.use(cors());
 let serviceAccount = require('./serviceAccountKey.json');
 
 serviceAccount.project_id = process.env.FIREBASE_PROJECT_ID;
