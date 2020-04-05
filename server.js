@@ -45,16 +45,15 @@ app.get('/restaurants', (req, res) => {
 })
 
 app.post('/restaurant', async (req, res) => {
+    let ref = db.collection('restaurants').doc()
+    console.log(ref.id);
 
-    console.log(req.body);
-
-    let setDoc = db.collection('restaurants').doc().set(req.body);
+    let setDoc = ref.set(req.body);
 
     try {
-        const response = await setDoc;
-        console.log('Set: ', response);
+        await setDoc;
         res.set('Content-Type', 'text/plain');
-        res.send(req.body);
+        res.send({id: ref.id, name: req.body.name});
     }
     catch (err) {
         console.log(`"Add failed with error: ${err}`);
